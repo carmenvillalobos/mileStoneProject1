@@ -3,4 +3,6 @@ body {
 background-image: url(css-lattice-pattern.png);
 color: white;
 font-family: sans-serif;
+text-align: center;
+padding: 80px 50px 30px 100px;
 }
