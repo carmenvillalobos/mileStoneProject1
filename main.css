@@ -6,3 +6,30 @@ font-family: sans-serif;
 text-align: center;
 padding: 80px 50px 30px 100px;
 }
+
+.game{
+    border-style: solid;
+    padding: 200px;
+}
+
+.game p{
+    padding-top: 200px
+}
+
+.game img{
+    position: absolute;
+    animation: moveSquare 4s infinite;
+}
+
+@keyframes moveSquare{
+    10% {
+        transform: rotate(3deg) translate(-300px, 2vh);
+      }
+      50% {
+        transform: rotate(-4deg) translate(-7vh, 150px);
+      }
+      25%,
+      75% {
+        transform: rotate(6deg) translate(190px, 12vh);
+      }
+}
