@@ -13,13 +13,20 @@ padding: 80px 50px 30px 100px;
 }
 
 .game p{
-    padding-top: 200px
+    padding-top: 200px;
+    font-size: 20px;
+}
+
+.game div{
+  padding-top: 0px;
+  font-size: 20px;
 }
 
 .game img{
     position: absolute;
     animation: moveSquare 4s infinite;
 }
+
 
 @keyframes moveSquare{
     10% {
@@ -33,3 +40,4 @@ padding: 80px 50px 30px 100px;
         transform: rotate(6deg) translate(190px, 12vh);
       }
 }
+
