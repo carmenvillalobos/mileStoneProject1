@@ -7,27 +7,31 @@ text-align: center;
 padding: 80px 50px 30px 100px;
 }
 
+
 .game{
     border-style: solid;
     padding: 200px;
 }
 
+/* styling for the score section */
 .game p{
     padding-top: 200px;
     font-size: 20px;
 }
 
+/* styling for the timer section */
 .game div{
   padding-top: 0px;
   font-size: 20px;
 }
 
+/* animation added for the white square image */
 .game img{
     position: absolute;
     animation: moveSquare 4s infinite;
 }
 
-
+/* specific transformations added for the white square image */
 @keyframes moveSquare{
     10% {
         transform: rotate(3deg) translate(-300px, 2vh);
