@@ -1,7 +1,10 @@
+
+
 // start the game button
 function startGame(){
     let startDiv = document.getElementById("start");
     startDiv.style.display = "none";
+    
     start();
 }
 
