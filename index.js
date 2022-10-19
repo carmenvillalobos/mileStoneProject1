@@ -1,13 +1,3 @@
-
-
-// start the game button
-function startGame(){
-    let startDiv = document.getElementById("start");
-    startDiv.style.display = "none";
-    
-    start();
-}
-
 // adding a point for every time you click on the white square
 var score = 0;
 
