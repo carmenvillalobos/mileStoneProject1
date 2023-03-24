@@ -1,0 +1,132 @@
+
+
+//SCSS variables
+//background layout
+$color-theme: rgb(0, 179, 255);
+$font: sans-serif;
+$alignment: center;
+$outside-padding: 80px 50px 30px 100px;
+
+$outside-border: solid;
+$inside-padding: 200px;
+
+// styling for the score section 
+$score-padding: 200px;
+$text-size: 20px;
+
+// styling for the timer section 
+$timer-padding: 0px;
+
+// animation added for the white square image 
+$location: absolute;
+$movement: moveSquare 4s infinite;
+
+//specific transformations added for the white square image
+//use an @mix for this
+//documentation help: https://stackoverflow.com/questions/40183991/create-a-sass-mixin-for-animation
+@mixin animation-mixin($name, $from, $to) {
+    @keyframes #{$name} {
+      0% {transform: translate3d($from, 0, 0); opacity: 0;}
+      100% {transform: translate3d($to, 0, 0); opacity: 1;}
+    }
+  }
+
+@include animation-mixin(moveSquare, 0, 100%);
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @if $circle {
+        border-radius: $size / 2;
+      }
+  }
+  
+@mixin horizontal-list {
+    @include reset-list;
+  
+    li {
+      display: inline-block;
+      margin: {
+        left: -2px;
+        right: 2em;
+      }
+    }
+  }
+  
+    nav ul {
+        @include horizontal-list;
+  }
+
+
+@function invert($color, $amount: 100%) {
+    $inverse: change-color($color, $hue: hue($color) + 180);
+    @return mix($inverse, $color, $amount);
+  }
+  
+  $primary-color: #036;
+  .header {
+    background-color: invert($primary-color, 80%);
+  }
+
+@function sum($numbers...) {
+    $sum: 0;
+    @each $number in $numbers {
+      $sum: $sum + $number;
+    }
+    @return $sum;
+  }
+
+@function fg($args...) {
+    @warn "The fg() function is deprecated. Call foreground() instead.";
+    @return foreground($args...);
+  }
+
+body{
+
+    background-color: $color-theme;
+    font-family: $font;
+    text-align: $alignment;
+    padding: $outside-padding;
+
+    .homePage{
+        font-size: $text-size;
+    }
+    .question{
+        font-size: $text-size;
+    }
+    .directions{
+        font-size: $text-size;
+    }
+    .gameExplanation{
+        font-size: $text-size;
+    }
+    .hints {
+        font-size: $text-size;
+    }
+    &.highestScores{
+        font-size: $text-size;
+    }
+    &.lowestScores{
+        font-size: $text-size;
+    }
+}
+
+// Nested selectors
+.game{
+
+    p{
+        padding-top: $score-padding;
+        font-size: $text-size;
+    }
+
+    div{
+        padding-top: $timer-padding;
+        font-size: $text-size;
+    }
+
+    img{
+        position: $location;
+        animation: $movement;
+    }
+}

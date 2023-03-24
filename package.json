@@ -1,0 +1,22 @@
+{
+  "name": "milestoneproject1",
+  "version": "1.0.0",
+  "description": "What was the inspiration for the game? -The inspiration of the game was from the game \"Menja\" that can be found here https://codepen.io/MillerTime/pen/BexBbE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carmenvillalobos/mileStoneProject1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carmenvillalobos/mileStoneProject1/issues"
+  },
+  "homepage": "https://github.com/carmenvillalobos/mileStoneProject1#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
